@@ -51,13 +51,15 @@ const Button = styled.button`
 
 
 const TextSection = ({ title, text, buttonText}) => (
-    <Base className="d-flex flex-column flex-md-row">
+    <Base className="d-flex flex-column flex-lg-row">
         <Heading className="pe-6">{title}</Heading>
-        <Paragraph>{text}</Paragraph>
-        <Button className="position-relative">
-            <p className="mb-0">{buttonText}</p>
-            <img src={ButtonAccent} alt="Button Accent" className="position-absolute bottom-0 end-0"/>
-        </Button>
+        <div className="d-flex flex-column">
+            <Paragraph>{text}</Paragraph>
+            <Button className="position-relative" onClick={() => alert(`${buttonText} clicked`)}>
+                <p className="mb-0">{buttonText}</p>
+                <img src={ButtonAccent} alt="Button Accent" className="position-absolute bottom-0 end-0"/>
+            </Button>
+        </div>
     </Base>
 );
 
