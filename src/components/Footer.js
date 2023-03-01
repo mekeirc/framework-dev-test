@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Heading from './Heading';
 import Logo from '../images/logo.png';
 import TwitterIcon from '../images/twitter-icon.svg';
+import { COLORS } from '../constants';
 
 const FooterBase = styled.footer`
     background: #0C1623;
@@ -10,7 +11,7 @@ const FooterBase = styled.footer`
 `;
 
 const FooterLinkBase = styled.a`
-    color: #fff;
+    color: ${COLORS.white.hex};
     opacity: 60%;
     font-size: 14px;
     text-decoration: none;
@@ -19,7 +20,7 @@ const FooterLinkBase = styled.a`
     padding-bottom: 20px;
 
     &:hover, &:visited, &:active {
-        color: #fff;
+        color: ${COLORS.white.hex};
         opacity: 100%;
     }
 `;
@@ -40,7 +41,7 @@ const Footer = () => (
             <Heading
                 text="Contact Us"
                 size="12px"
-                color="#fff"
+                color={`${COLORS.white.hex}`}
                 uppercase
                 pt="66px"
                 pb="19px"
@@ -49,7 +50,7 @@ const Footer = () => (
                 text="info@starform.co"
                 size="22px"
                 desktopSize="30px"
-                color="#fff"
+                color={`${COLORS.white.hex}`}
                 pt="12px"
                 underlined
             />
@@ -57,7 +58,7 @@ const Footer = () => (
                 text="+44 (0)1235 428199"
                 size="22px"
                 desktopSize="30px"
-                color="#fff"
+                color={`${COLORS.white.hex}`}
                 pt="12px"
                 underlined
             />
@@ -66,7 +67,7 @@ const Footer = () => (
             <Heading
                 text="Navigation"
                 size="12px"
-                color="#fff"
+                color={`${COLORS.white.hex}`}
                 uppercase
                 pt="66px"
                 pb="19px"
@@ -89,7 +90,7 @@ const Footer = () => (
             <Heading
                 text="Legal"
                 size="12px"
-                color="#fff"
+                color={`${COLORS.white.hex}`}
                 uppercase
                 pt="66px"
                 pb="19px"
@@ -101,14 +102,14 @@ const Footer = () => (
             <Heading
                 text={`© Starform ${CurrentYear} | All rights reserved`}
                 size="12px"
-                color="#fff"
+                color={`${COLORS.white.hex}`}
                 pt="50px"
                 pb="21px"
             />
             <Heading
                 text="Website Designed by Framework"
                 size="12px"
-                color="#fff"
+                color={`${COLORS.white.hex}`}
                 pt="0"
                 pb="25px"
             />

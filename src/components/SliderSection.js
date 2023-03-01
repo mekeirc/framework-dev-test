@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ButtonAccent from '../images/button-accent.svg';
 import NorthernLights from '../images/northern-lights.jpg';
 import NorthernLightsLarge from '../images/northern-lights-large.jpg';
+import { COLORS } from '../constants';
 
 const Base = styled.section`
     background: url(${NorthernLights}) no-repeat;
@@ -17,7 +18,7 @@ const Base = styled.section`
 `;
 
 const Heading = styled.h4`
-    color: #E8B222;
+    color: ${COLORS.orange.hex};
     font-family: 'Sora', sans-serif;
     font-size: 14px;
     letter-spacing: 3px;
@@ -33,7 +34,7 @@ const Heading = styled.h4`
 `;
 
 const Paragraph = styled.p`
-    color: #fff;
+    color: ${COLORS.white.hex};
     font-family: 'Sora', sans-serif;
     font-size: 30px;
     margin-bottom: 20px;
@@ -57,7 +58,7 @@ const Button = styled.button`
     max-width: 190px;
 
     p {
-        color: #fff;
+        color: ${COLORS.white.hex};
         font-family: 'Sora', sans-serif;
         font-size: 16px;
     }

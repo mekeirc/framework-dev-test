@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Starburst from '../images/starburst.jpg';
 import StarburstLarge from '../images/starburst-large.jpg';
 import CutButton from '../images/cut-button.svg';
+import { COLORS } from '../constants';
 
 const Base = styled.div`
     background: url(${Starburst}) no-repeat;
@@ -16,7 +17,7 @@ const Base = styled.div`
 `;
 
 const Heading = styled.h4`
-    color: #E8B222;
+    color: ${COLORS.orange.hex};
     font-family: 'Sora', sans-serif;
     font-size: 14px;
     letter-spacing: 3px;
@@ -25,7 +26,7 @@ const Heading = styled.h4`
 `;
 
 const Paragraph = styled.p`
-    color: #fff;
+    color: ${COLORS.white.hex};
     font-family: 'Sora', sans-serif;
     font-size: 30px;
     margin-bottom: 40px;
@@ -39,7 +40,7 @@ const Paragraph = styled.p`
 const Button = styled.button`
     background: url(${CutButton}) no-repeat;
     border: 0;
-    color: #fff;
+    color: ${COLORS.white.hex};
     font-family: 'Sora', sans-serif;
     font-size: 16px;
     width: 190px;

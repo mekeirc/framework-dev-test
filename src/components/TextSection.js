@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import ButtonAccent from '../images/button-accent.svg';
+import { COLORS } from '../constants';
 
 const Base = styled.section`
-    background: #132237;
+    background: ${COLORS.navy.hex};
     padding: 0 25px 0 25px;
     text-align: left;
 `;
 
 const Heading = styled.h4`
-    color: #E8B222;
+    color: ${COLORS.orange.hex};
     font-family: 'Sora', sans-serif;
     font-size: 14px;
     letter-spacing: 3px;
@@ -25,7 +26,7 @@ const Heading = styled.h4`
 `;
 
 const Paragraph = styled.p`
-    color: #fff;
+    color: ${COLORS.white.hex};
     font-family: 'Sora', sans-serif;
     font-size: 25px;
     margin-bottom: 40px;
@@ -43,7 +44,7 @@ const Button = styled.button`
     max-width: 190px;
 
     p {
-        color: #fff;
+        color: ${COLORS.white.hex};
         font-family: 'Sora', sans-serif;
         font-size: 16px;
     }

@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import MembershipArea from '../images/membership-area.png';
+import { COLORS } from '../constants';
 
 const Base = styled.div`
-    background: #132237;
+    background: ${COLORS.navy.hex};
     padding: 100px 0 57px 0;
 
     .logos {
@@ -17,7 +18,7 @@ const Base = styled.div`
 `;
 
 const Heading = styled.h4`
-    color: #E8B222;
+    color: ${COLORS.orange.hex};
     font-family: 'Sora', sans-serif;
     font-size: 14px;
     letter-spacing: 3px;
