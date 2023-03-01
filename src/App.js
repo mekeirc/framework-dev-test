@@ -7,6 +7,7 @@ import ImageSection from "./components/ImageSection";
 import SliderSection from "./components/SliderSection";
 import SpaceView from "./images/space-view.png";
 import Memberships from "./components/Memberships";
+import Contact from "./components/Contact";
 
 function App() {
 	return (
@@ -33,6 +34,7 @@ function App() {
 				buttonText="Business Plan"
 			/>
 			<Memberships />
+			<Contact />
 		</div>
 	);
 }

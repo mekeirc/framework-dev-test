@@ -8,6 +8,7 @@ const Base = styled.div`
 
     .logos {
         max-width: 800px;
+        margin-bottom: 79px;
 
         @media screen and (min-width: 992px){
             max-width: initial;
