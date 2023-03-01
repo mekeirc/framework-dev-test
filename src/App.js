@@ -8,6 +8,7 @@ import SliderSection from "./components/SliderSection";
 import SpaceView from "./images/space-view.png";
 import Memberships from "./components/Memberships";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
 	return (
@@ -35,6 +36,7 @@ function App() {
 			/>
 			<Memberships />
 			<Contact />
+			<Footer />
 		</div>
 	);
 }
