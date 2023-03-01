@@ -1,12 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import Starburst from '../images/starburst.jpg';
+import StarburstLarge from '../images/starburst-large.jpg';
 import CutButton from '../images/cut-button.svg';
 
 const Base = styled.div`
     background: url(${Starburst}) no-repeat;
     background-size: cover;
     padding: 80px 25px 57px 25px;
+
+    @media screen and (min-width: 992px){
+        background: url(${StarburstLarge}) no-repeat;
+        padding: 188px 25px 142px 25px;
+    }
 `;
 
 const Heading = styled.h4`
