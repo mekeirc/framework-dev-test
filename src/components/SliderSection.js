@@ -1,16 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import ButtonAccent from '../images/button-accent.svg';
+import NorthernLights from '../images/northern-lights.jpg';
+import NorthernLightsLarge from '../images/northern-lights-large.jpg';
 
 const Base = styled.section`
-    background: #132237;
+    background: url(${NorthernLights}) no-repeat;
     padding: 120px 25px 0 25px;
     text-align: left;
+    background-size: cover;
 
-    .large-image {
-        padding-bottom: 40px;
-        max-width: 700px;
-        max-height: 680px;
+    @media screen and (min-width: 375px){
+        background: url(${NorthernLightsLarge}) no-repeat;
+        background-size: cover;
     }
 `;
 
@@ -20,6 +22,14 @@ const Heading = styled.h4`
     font-size: 14px;
     letter-spacing: 3px;
     text-transform: uppercase;
+
+    &.pe-6 {
+        padding-right: 0;
+
+        @media screen and (min-width: 992px){
+            padding-right: 186px;
+        }
+    }
 `;
 
 const Paragraph = styled.p`
@@ -45,7 +55,6 @@ const Button = styled.button`
     border: 0;
     padding: 20px 35px;
     max-width: 190px;
-    margin-bottom: 90px;
 
     p {
         color: #fff;
@@ -55,13 +64,12 @@ const Button = styled.button`
 `;
 
 
-const ImageSection = ({ title, text, subText, buttonText, image}) => (
-    <Base className="d-flex flex-column flex-lg-row-reverse">
-        <img src={image} alt="Large Img" className="ps-lg-5 ms-lg-2 large-image" />
-        <div className="d-flex flex-column">
-            <Heading className="ps-6">{title}</Heading>
-            <Paragraph>{text}</Paragraph>
-            <Paragraph className="sub">{subText}</Paragraph>
+const SliderSection = ({ title, text, subText, buttonText }) => (
+    <Base className="d-flex flex-column">
+        <Heading className="pe-6 text-center">{title}</Heading>
+        <div className="d-flex flex-column align-items-center pb-5">
+            <Paragraph className="text-center">{text}</Paragraph>
+            <Paragraph className="sub text-center">{subText}</Paragraph>
             <Button className="position-relative" onClick={() => alert(`${buttonText} clicked`)}>
                 <p className="mb-0">{buttonText}</p>
                 <img src={ButtonAccent} alt="Button Accent" className="position-absolute bottom-0 end-0"/>
@@ -70,4 +78,4 @@ const ImageSection = ({ title, text, subText, buttonText, image}) => (
     </Base>
 );
 
-export default ImageSection;
+export default SliderSection;
