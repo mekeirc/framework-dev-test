@@ -9,10 +9,11 @@ import PaginationActive from '../images/swiper-pagination-active.svg';
 import PaginationInactive from '../images/swiper-pagination-inactive.svg';
 import { BREAKPOINTS } from '../constants';
 import { PrimaryButton } from './Buttons';
+import NavigationBack from '../images/swiper-navigation-back.svg';
+import NavigationForward from '../images/swiper-navigation-forward.svg';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
@@ -20,10 +21,20 @@ const SwiperArea = styled.div`
     padding-bottom: 137px;
     background: url(${NorthernLights}) no-repeat;
     background-size: cover;
-
+    
     @media screen and (min-width: ${BREAKPOINTS.lg}){
         background: url(${NorthernLightsLarge}) no-repeat;
         background-size: cover;
+    }
+
+    // Swiper Styling
+
+    .custom-pagination {
+        width: 150px;
+    }
+
+    .swiper-button-disabled {
+        opacity: 0.3;
     }
 
 	.swiper-pagination {
@@ -44,6 +55,7 @@ const SwiperArea = styled.div`
 		height: 12px;
 		opacity: 1;
 		background: url(${PaginationInactive}) center center;
+        margin-right: 5px;
 	}
 
 	.swiper-pagination-bullet-active {
@@ -82,11 +94,15 @@ const Paragraph = styled.p`
         opacity: 80%;
         font-size: 16px;
         margin-bottom: 40px;
+
+        @media screen and (min-width: ${BREAKPOINTS.lg}){
+            margin-bottom: 60px;
+        }
     }
 
-    @media screen and (min-width: 992px){
+    @media screen and (min-width: ${BREAKPOINTS.lg}){
         font-size: 40px;
-        margin-bottom: 60px;
+        margin-bottom: 108px;
     }
 `;
 
@@ -104,17 +120,27 @@ const SlideContent = ({ title, desktopTitle, text, subText, buttonText }) => (
     </Base>
 );
 
+const InvisibleButton = styled.button`
+    background: none;
+    border: 0;
+`;
+
 const SliderSection = () => {
 	return (
-		<SwiperArea>
+		<SwiperArea className="position-relative">
 			<Swiper
-				pagination={true}
+                pagination={{
+                    el: '.custom-pagination',
+                    clickable: true
+                }}
 				modules={[Pagination, Navigation, Scrollbar]}
 				spaceBetween={50}
 				slidesPerView={1}
-				onSlideChange={() => console.log("slide change")}
-				onSwiper={(swiper) => console.log(swiper)}
 				className="mySwiper"
+                navigation={{
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }}
 			>
 				<SwiperSlide>
                     <SlideContent
@@ -125,10 +151,61 @@ const SliderSection = () => {
                         buttonText="Business Plan"
                     />
 				</SwiperSlide>
-				<SwiperSlide>Slide 2</SwiperSlide>
-				<SwiperSlide>Slide 3</SwiperSlide>
-				<SwiperSlide>Slide 4</SwiperSlide>
+				<SwiperSlide>
+                    <SlideContent
+                        title="Our Objectives"
+                        desktopTitle="The Benefits of space solar"
+                        text="Convene an international partnership for development of space based energy."
+                        subText="The UK has set out an ambitious national clean energy policy – Net Zero – to fully decarbonise the economy by 2050. This future energy scenario requires clean and sustainable energy generation from renewable sources."
+                        buttonText="Business Plan"
+                    />
+                </SwiperSlide>
+				<SwiperSlide>
+                    <SlideContent
+                        title="Our Objectives"
+                        desktopTitle="The Benefits of space solar"
+                        text="Convene an international partnership for development of space based energy."
+                        subText="The UK has set out an ambitious national clean energy policy – Net Zero – to fully decarbonise the economy by 2050. This future energy scenario requires clean and sustainable energy generation from renewable sources."
+                        buttonText="Business Plan"
+                    />
+                </SwiperSlide>
+				<SwiperSlide>
+                    <SlideContent
+                        title="Our Objectives"
+                        desktopTitle="The Benefits of space solar"
+                        text="Convene an international partnership for development of space based energy."
+                        subText="The UK has set out an ambitious national clean energy policy – Net Zero – to fully decarbonise the economy by 2050. This future energy scenario requires clean and sustainable energy generation from renewable sources."
+                        buttonText="Business Plan"
+                    />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <SlideContent
+                        title="Our Objectives"
+                        desktopTitle="The Benefits of space solar"
+                        text="Convene an international partnership for development of space based energy."
+                        subText="The UK has set out an ambitious national clean energy policy – Net Zero – to fully decarbonise the economy by 2050. This future energy scenario requires clean and sustainable energy generation from renewable sources."
+                        buttonText="Business Plan"
+                    />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <SlideContent
+                        title="Our Objectives"
+                        desktopTitle="The Benefits of space solar"
+                        text="Convene an international partnership for development of space based energy."
+                        subText="The UK has set out an ambitious national clean energy policy – Net Zero – to fully decarbonise the economy by 2050. This future energy scenario requires clean and sustainable energy generation from renewable sources."
+                        buttonText="Business Plan"
+                    />
+                </SwiperSlide>
 			</Swiper>
+            <div className="d-flex align-items-center justify-content-center">
+                <InvisibleButton className="swiper-button-prev">
+                    <img src={NavigationBack} alt="Back" />
+                </InvisibleButton>
+                <div className="custom-pagination d-flex align-items-center justify-content-center"></div>
+                <InvisibleButton className="swiper-button-next">
+                    <img src={NavigationForward} alt="Forwards" />
+                </InvisibleButton>
+            </div>
 		</SwiperArea>
 	);
 };
