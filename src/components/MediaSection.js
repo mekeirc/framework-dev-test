@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation, Scrollbar } from "swiper";
+import { Navigation, Scrollbar } from "swiper";
 import Heading from "./Heading";
 import { BREAKPOINTS, COLORS } from "../constants";
 import MediaCardArrow from '../images/media-card-arrow.svg';
@@ -34,7 +34,7 @@ const Badge = styled.div(({ color }) => css`
 
 const Base = styled.div`
     background: ${COLORS.navy.hex};
-    padding: 20px;
+    padding: 20px 20px 80px 20px;
 
     .swiper-button-disabled {
         opacity: 0.3;
