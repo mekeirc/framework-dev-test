@@ -66,9 +66,11 @@ const SwiperArea = styled.div`
 `;
 
 const Base = styled.section`
-    padding: 120px 25px 0 25px;
+    padding: 120px 0 0 0;
     text-align: left;
     background-size: cover;
+    max-width: 1250px;
+    margin: auto;
 
     @media screen and (min-width: ${BREAKPOINTS.lg}){
         padding: 218px 200px 0 200px;

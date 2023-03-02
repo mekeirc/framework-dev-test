@@ -46,7 +46,9 @@ const Footer = () => (
         <div className="d-flex flex-column flex-lg-row justify-content-between">
         <div className="d-inline-flex justify-content-between d-lg-block">
             <img src={Logo} alt="logo" className="text-start logo-pad" />
-            <img src={TwitterIcon} alt="twitter icon" className="d-lg-none" />
+            <a href="https://twitter.com/WeAre_Framework">
+                <img src={TwitterIcon} alt="twitter icon" className="d-lg-none" />
+            </a>
         </div>
         <div className="d-flex flex-column">
             <Heading
@@ -57,22 +59,26 @@ const Footer = () => (
                 pt="66px"
                 pb="19px"
             />
-            <Heading
-                text="info@starform.co"
-                size="22px"
-                desktopSize="30px"
-                color={`${COLORS.white.hex}`}
-                pt="12px"
-                underlined
-            />
-            <Heading
-                text="+44 (0)1235 428199"
-                size="22px"
-                desktopSize="30px"
-                color={`${COLORS.white.hex}`}
-                pt="12px"
-                underlined
-            />
+            <a href="mailto: info@starform.co">
+                <Heading
+                    text="info@starform.co"
+                    size="22px"
+                    desktopSize="30px"
+                    color={`${COLORS.white.hex}`}
+                    pt="12px"
+                    underlined
+                />
+            </a>
+            <a href="tel: +44 (0)1235 428199">
+                <Heading
+                    text="+44 (0)1235 428199"
+                    size="22px"
+                    desktopSize="30px"
+                    color={`${COLORS.white.hex}`}
+                    pt="12px"
+                    underlined
+                />
+            </a>
         </div>
         <div className="d-flex flex-column">
             <Heading
@@ -128,7 +134,9 @@ const Footer = () => (
             </div>
         </div>
         <div>
-            <img src={TwitterIcon} alt="twitter icon" className="d-none d-lg-block logo-pad" />
+            <a href="https://twitter.com/WeAre_Framework">
+                <img src={TwitterIcon} alt="twitter icon" className="d-none d-lg-block logo-pad" />
+            </a>
         </div>
         </div>
         <div className="d-none d-lg-flex justify-content-between align-items-baseline">

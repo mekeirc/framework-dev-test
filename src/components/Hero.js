@@ -8,11 +8,20 @@ import { COLORS, BREAKPOINTS } from '../constants';
 
 const HeroLayout = styled.div`
 	padding: 0 25px 0 25px;
-	min-height: 100vh;
+	min-height: 70vh;
+
+    @media screen and (min-width: ${BREAKPOINTS.xl}){
+        min-height: 100vh;
+    }
 `;
 
 const Header = styled.header`
     padding: 40px 25px 0 25px;
+
+    .logo {
+        width: 108px;
+        height: 18px;
+    }
 `;
 
 const StarBG = styled.div`
@@ -48,10 +57,35 @@ const ButtonArea = styled.div`
     bottom: 200px;
 `;
 
+const NavLink = styled.a`
+    color: ${COLORS.white.hex};
+    font-family: 'Sora', sans-serif;
+    font-size: 18px;
+    margin-right: 30px;
+    text-decoration: none;
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+
+    &:hover, &:active, &:focus {
+        color: ${COLORS.orange.hex};
+        text-decoration: underline;
+    }
+`;
+
 const Nav = () => (
     <Header className="w-100 d-flex justify-content-between">
-        <img src={Logo} alt="Logo" />
-        <img src={MobileMenu} alt="Menu" />
+        <img src={Logo} alt="Logo" className="logo" />
+        <img src={MobileMenu} alt="Menu" className="d-xl-none" />
+        <div className="d-none d-xl-block">
+            <NavLink href="#business-plan">Business Plan</NavLink>
+            <NavLink href="#about-us">About Us</NavLink>
+            <NavLink href="#technology">Technology</NavLink>
+            <NavLink href="#investors">Investor Relations</NavLink>
+            <NavLink href="#news-resources">News &amp; Resources</NavLink>
+            <NavLink href="#contact">Contact Us</NavLink>
+        </div>
     </Header>
 );
 
