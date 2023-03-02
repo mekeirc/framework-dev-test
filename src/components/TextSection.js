@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import ButtonAccent from '../images/button-accent.svg';
 import { BREAKPOINTS, COLORS } from '../constants';
+import { PrimaryButton } from './Buttons';
 
 const Base = styled.section`
     background: ${COLORS.navy.hex};
@@ -9,7 +9,7 @@ const Base = styled.section`
     text-align: left;
 
     @media screen and (min-width: ${BREAKPOINTS.xl}){
-        padding: 0 110px 0 110px;
+        padding: 0 110px 217px 110px;
     }
 `;
 
@@ -23,7 +23,7 @@ const Heading = styled.h4`
     &.pe-6 {
         padding-right: 0;
 
-        @media screen and (min-width: 992px){
+        @media screen and (min-width: ${BREAKPOINTS.lg}){
             padding-right: 186px;
         }
     }
@@ -35,35 +35,20 @@ const Paragraph = styled.p`
     font-size: 25px;
     margin-bottom: 40px;
 
-    @media screen and (min-width: 992px){
+    @media screen and (min-width: ${BREAKPOINTS.lg}){
         font-size: 40px;
         margin-bottom: 60px;
     }
 `;
 
-const Button = styled.button`
-    background: #3C76B6;
-    border: 0;
-    padding: 20px 35px;
-    max-width: 190px;
-
-    p {
-        color: ${COLORS.white.hex};
-        font-family: 'Sora', sans-serif;
-        font-size: 16px;
-    }
-`;
-
-
 const TextSection = ({ title, text, buttonText}) => (
-    <Base className="d-flex flex-column flex-lg-row">
+    <Base className="d-flex flex-column flex-lg-row" id="mission">
         <Heading className="pe-6">{title}</Heading>
         <div className="d-flex flex-column">
             <Paragraph>{text}</Paragraph>
-            <Button className="position-relative" onClick={() => alert(`${buttonText} clicked`)}>
-                <p className="mb-0">{buttonText}</p>
-                <img src={ButtonAccent} alt="Button Accent" className="position-absolute bottom-0 end-0"/>
-            </Button>
+            <PrimaryButton className="position-relative" onClick={() => alert(`${buttonText} clicked`)}>
+                {buttonText}
+            </PrimaryButton>
         </div>
     </Base>
 );

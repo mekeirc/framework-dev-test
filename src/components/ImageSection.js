@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ButtonAccent from '../images/button-accent.svg';
 import { COLORS, BREAKPOINTS } from '../constants';
+import { PrimaryButton } from './Buttons';
 
 const Base = styled.section`
     background: ${COLORS.navy.hex};
@@ -10,6 +11,10 @@ const Base = styled.section`
 
     @media screen and (min-width: ${BREAKPOINTS.xl}){
         padding: 120px 110px 0 110px;
+    }
+
+    .button-pad {
+        margin-bottom: 216px;
     }
 
     .large-image {
@@ -39,26 +44,11 @@ const Paragraph = styled.p`
         margin-bottom: 40px;
     }
 
-    @media screen and (min-width: 992px){
+    @media screen and (min-width: ${BREAKPOINTS.lg}){
         font-size: 40px;
         margin-bottom: 60px;
     }
 `;
-
-const Button = styled.button`
-    background: #3C76B6;
-    border: 0;
-    padding: 20px 35px;
-    max-width: 190px;
-    margin-bottom: 90px;
-
-    p {
-        color: ${COLORS.white.hex};
-        font-family: 'Sora', sans-serif;
-        font-size: 16px;
-    }
-`;
-
 
 const ImageSection = ({ title, text, subText, buttonText, image}) => (
     <Base className="d-flex flex-column flex-lg-row-reverse">
@@ -67,10 +57,9 @@ const ImageSection = ({ title, text, subText, buttonText, image}) => (
             <Heading className="ps-6">{title}</Heading>
             <Paragraph>{text}</Paragraph>
             <Paragraph className="sub">{subText}</Paragraph>
-            <Button className="position-relative" onClick={() => alert(`${buttonText} clicked`)}>
-                <p className="mb-0">{buttonText}</p>
-                <img src={ButtonAccent} alt="Button Accent" className="position-absolute bottom-0 end-0"/>
-            </Button>
+            <PrimaryButton className="position-relative button-pad" onClick={() => alert(`${buttonText} clicked`)}>
+                {buttonText}
+            </PrimaryButton>
         </div>
     </Base>
 );

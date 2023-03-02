@@ -11,3 +11,8 @@ export const PrimaryButton = styled.button`
     width: 190px;
     padding: 20px 35px;
 `;
+
+export const InvisibleButton = styled.button`
+    background: none;
+    border: 0;
+`;

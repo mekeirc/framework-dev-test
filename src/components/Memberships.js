@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import MembershipArea from '../images/membership-area.png';
-import { COLORS } from '../constants';
+import { COLORS, BREAKPOINTS } from '../constants';
 
 const Base = styled.div`
     background: ${COLORS.navy.hex};
@@ -11,7 +11,7 @@ const Base = styled.div`
         max-width: 800px;
         margin-bottom: 79px;
 
-        @media screen and (min-width: 992px){
+        @media screen and (min-width: ${BREAKPOINTS.lg}){
             max-width: initial;
         }
     }
@@ -28,7 +28,7 @@ const Heading = styled.h4`
     &.pe-6 {
         padding-right: 0;
 
-        @media screen and (min-width: 992px){
+        @media screen and (min-width: ${BREAKPOINTS.lg}){
             padding-right: 186px;
         }
     }

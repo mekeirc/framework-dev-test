@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { BREAKPOINTS } from "../constants";
 
 const HeadingBase = styled.h1(({ color, size, desktopSize, uppercase, pt, pb, underlined }) => css`
     font-size: ${size};
@@ -8,7 +9,7 @@ const HeadingBase = styled.h1(({ color, size, desktopSize, uppercase, pt, pb, un
     padding-top: ${pt};
     padding-bottom: ${pb};
 
-    @media screen and (min-width: 992px){
+    @media screen and (min-width: ${BREAKPOINTS.lg}){
         font-size: ${desktopSize};
     }
     

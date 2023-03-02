@@ -26,7 +26,7 @@ const MainHeading = styled.h1`
     color: ${COLORS.white.hex};
     margin-bottom: 0;
 
-    @media screen and (min-width: 992px){
+    @media screen and (min-width: ${BREAKPOINTS.lg}){
         font-size: 100px;
     }
 `;
@@ -35,8 +35,8 @@ const SubHeading = styled.h2`
     color: ${COLORS.white.hex};
     font-family: 'Sora', sans-serif;
     font-size: 18px;
-    margin-bottom: 0;
-    margin-top: 20px;
+    margin: 20px auto 0 auto;
+    max-width: 515px;
 
     .orange {
         color: ${COLORS.orange.hex};
@@ -70,7 +70,9 @@ const Hero = () => (
                     </SubHeading>
                 </div>
                 <ButtonArea className="position-absolute start-50">
-                    <img src={DownArrow} alt="Down Arrow" />
+                    <a href="#mission">
+                        <img src={DownArrow} alt="Down Arrow" />
+                    </a>
                 </ButtonArea>
             </HeroLayout>
         </StarBG>

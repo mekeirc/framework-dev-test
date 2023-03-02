@@ -8,7 +8,7 @@ import { Pagination, Navigation, Scrollbar } from "swiper";
 import PaginationActive from '../images/swiper-pagination-active.svg';
 import PaginationInactive from '../images/swiper-pagination-inactive.svg';
 import { BREAKPOINTS } from '../constants';
-import { PrimaryButton } from './Buttons';
+import { PrimaryButton, InvisibleButton } from './Buttons';
 import NavigationBack from '../images/swiper-navigation-back.svg';
 import NavigationForward from '../images/swiper-navigation-forward.svg';
 
@@ -118,11 +118,6 @@ const SlideContent = ({ title, desktopTitle, text, subText, buttonText }) => (
         </div>
     </Base>
 );
-
-const InvisibleButton = styled.button`
-    background: none;
-    border: 0;
-`;
 
 const SliderSection = () => {
 	return (

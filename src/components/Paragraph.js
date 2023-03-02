@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { BREAKPOINTS } from "../constants";
 
 const ParagraphBase = styled.p(({ color, size, desktopSize, pt, pb }) => css`
     font-size: ${size};
@@ -8,7 +9,7 @@ const ParagraphBase = styled.p(({ color, size, desktopSize, pt, pb }) => css`
     padding-top: ${pt};
     padding-bottom: ${pb};
 
-    @media screen and (min-width: 992px){
+    @media screen and (min-width: ${BREAKPOINTS.lg}){
         font-size: ${desktopSize};
     }
 `);
