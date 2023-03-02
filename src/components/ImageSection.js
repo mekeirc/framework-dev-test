@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import ButtonAccent from '../images/button-accent.svg';
 import { COLORS, BREAKPOINTS } from '../constants';
 import { PrimaryButton } from './Buttons';
+import SignalCircle from '../images/signal-circle.png';
 
 const Base = styled.section`
     background: ${COLORS.navy.hex};
@@ -21,6 +21,20 @@ const Base = styled.section`
         padding-bottom: 40px;
         max-width: 700px;
         max-height: 680px;
+        z-index: 9;
+    }
+
+    .signal-circle {
+        position: absolute;
+        top: 0;
+        right: -40px;
+        max-width: 200px;
+
+        @media screen and (min-width: ${BREAKPOINTS.lg}){
+            right: 0;
+            top: -100px;
+            max-width: initial;
+        }
     }
 `;
 
@@ -51,7 +65,8 @@ const Paragraph = styled.p`
 `;
 
 const ImageSection = ({ title, text, subText, buttonText, image}) => (
-    <Base className="d-flex flex-column flex-lg-row-reverse">
+    <Base className="d-flex flex-column flex-lg-row-reverse position-relative">
+        <img src={SignalCircle} alt="Signal Circle" className="signal-circle" />
         <img src={image} alt="Large Img" className="ps-lg-5 ms-lg-2 large-image" />
         <div className="d-flex flex-column">
             <Heading className="ps-6">{title}</Heading>
