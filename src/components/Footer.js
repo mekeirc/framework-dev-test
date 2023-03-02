@@ -127,6 +127,9 @@ const Footer = () => (
                 />
             </div>
         </div>
+        <div>
+            <img src={TwitterIcon} alt="twitter icon" className="d-none d-lg-block logo-pad" />
+        </div>
         </div>
         <div className="d-none d-lg-flex justify-content-between align-items-baseline">
             <Heading
