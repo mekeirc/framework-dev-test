@@ -1,12 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import ButtonAccent from '../images/button-accent.svg';
-import { COLORS } from '../constants';
+import { BREAKPOINTS, COLORS } from '../constants';
 
 const Base = styled.section`
     background: ${COLORS.navy.hex};
     padding: 0 25px 0 25px;
     text-align: left;
+
+    @media screen and (min-width: ${BREAKPOINTS.xl}){
+        padding: 0 110px 0 110px;
+    }
 `;
 
 const Heading = styled.h4`

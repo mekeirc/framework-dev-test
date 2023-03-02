@@ -28,7 +28,6 @@ const SwiperArea = styled.div`
     }
 
     // Swiper Styling
-
     .custom-pagination {
         width: 150px;
     }

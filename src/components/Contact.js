@@ -12,6 +12,7 @@ const Base = styled.div`
 
     @media screen and (min-width: 992px){
         background: url(${StarburstLarge}) no-repeat;
+        background-size: cover;
         padding: 188px 25px 142px 25px;
     }
 `;

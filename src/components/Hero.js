@@ -4,11 +4,11 @@ import Logo from '../images/logo.png';
 import MobileMenu from '../images/mobile-menu.svg';
 import NightSky from '../images/hero-image.jpg';
 import DownArrow from '../images/circle-arrow-down.svg';
-import { COLORS } from '../constants';
+import { COLORS, BREAKPOINTS } from '../constants';
 
 const HeroLayout = styled.div`
-    padding: 0 25px 0 25px;
-    min-height: 585px;
+	padding: 0 25px 0 25px;
+	min-height: 100vh;
 `;
 
 const Header = styled.header`
@@ -44,9 +44,8 @@ const SubHeading = styled.h2`
     }    
 `;
 
-const ArrowArea = styled.div`
-    min-height: 217px;
-    background: ${COLORS.navy.hex};
+const ButtonArea = styled.div`
+    bottom: 200px;
 `;
 
 const Nav = () => (
@@ -60,7 +59,7 @@ const Hero = () => (
     <React.Fragment>
         <StarBG>
         <Nav />
-            <HeroLayout className='d-flex justify-content-center flex-column'>
+            <HeroLayout className='d-flex justify-content-center flex-column position-relative'>
                 <div>
                     <MainHeading>Welcome to StarForm</MainHeading>
                     <SubHeading>
@@ -70,11 +69,11 @@ const Hero = () => (
                         </span>
                     </SubHeading>
                 </div>
+                <ButtonArea className="position-absolute start-50">
+                    <img src={DownArrow} alt="Down Arrow" />
+                </ButtonArea>
             </HeroLayout>
         </StarBG>
-        <ArrowArea className="d-flex align-items-center justify-content-center">
-            <img src={DownArrow} alt="Down Arrow" />
-        </ArrowArea>
     </React.Fragment>
 );
 

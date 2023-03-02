@@ -1,12 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import ButtonAccent from '../images/button-accent.svg';
-import { COLORS } from '../constants';
+import { COLORS, BREAKPOINTS } from '../constants';
 
 const Base = styled.section`
     background: ${COLORS.navy.hex};
     padding: 120px 25px 0 25px;
     text-align: left;
+
+    @media screen and (min-width: ${BREAKPOINTS.xl}){
+        padding: 120px 110px 0 110px;
+    }
 
     .large-image {
         padding-bottom: 40px;
