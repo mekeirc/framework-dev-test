@@ -9,6 +9,7 @@ import SpaceView from "./images/space-view.png";
 import Memberships from "./components/Memberships";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import MediaSection from "./components/MediaSection";
 
 function App() {
 	return (
@@ -35,6 +36,7 @@ function App() {
 				buttonText="Business Plan"
 			/>
 			<Memberships />
+			<MediaSection />
 			<Contact />
 			<Footer />
 		</div>

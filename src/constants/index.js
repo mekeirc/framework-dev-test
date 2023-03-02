@@ -1,7 +1,10 @@
 export const COLORS = {
     "white": {hex: "#fff"},
     "orange": {hex: "#E8B222"},
-    "navy": {hex: "#132237"}
+    "navy": {hex: "#132237"},
+    "blue": {hex: "#22A0E8"},
+    "green": {hex: "#1EBC7A"},
+    "darkOrange": {hex: "#D38325"}
 }
 
 export const BREAKPOINTS = {

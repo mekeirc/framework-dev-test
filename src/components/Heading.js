@@ -21,7 +21,7 @@ const HeadingBase = styled.h1(({ color, size, desktopSize, uppercase, pt, pb, un
         ` : ``};
 `);
 
-const Heading = ({ text, size, desktopSize, color, uppercase, pt, pb, underlined }) => (
+const Heading = ({ text, size, desktopSize, color, uppercase, pt, pb, underlined, className }) => (
     <HeadingBase
         color={color}
         size={size}
@@ -30,6 +30,7 @@ const Heading = ({ text, size, desktopSize, color, uppercase, pt, pb, underlined
         pt={pt}
         pb={pb}
         underlined={underlined}
+        className={className}
     >
         {text}
     </HeadingBase>
