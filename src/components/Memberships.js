@@ -8,12 +8,7 @@ const Base = styled.div`
     padding: 100px 0 57px 0;
 
     .logos {
-        max-width: 800px;
         margin-bottom: 79px;
-
-        @media screen and (min-width: ${BREAKPOINTS.lg}){
-            max-width: initial;
-        }
     }
 `;
 
@@ -37,7 +32,7 @@ const Heading = styled.h4`
 const Memberships = () => (
     <Base className="overflow-hidden">
         <Heading>Memberships</Heading>
-        <img src={MembershipArea} alt="Memberships" className="logos" />
+        <img src={MembershipArea} alt="Memberships" className="logos w-100" />
     </Base>
 );
 

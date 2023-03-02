@@ -66,7 +66,7 @@ const SwiperArea = styled.div`
 `;
 
 const Base = styled.section`
-    padding: 120px 0 0 0;
+    padding: 120px 20px 0 20px;
     text-align: left;
     background-size: cover;
     max-width: 1250px;

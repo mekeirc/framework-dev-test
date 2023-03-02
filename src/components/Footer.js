@@ -14,6 +14,7 @@ const FooterBase = styled.footer`
     }
 
     .logo-pad {
+        height: 18px;
         @media screen and (min-width: ${BREAKPOINTS.lg}) {
             padding-top: 66px;
         }

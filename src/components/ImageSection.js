@@ -36,6 +36,14 @@ const Base = styled.section`
             max-width: initial;
         }
     }
+
+    &.overflow {
+        overflow: hidden;
+
+        @media screen and (min-width: ${BREAKPOINTS.lg}){
+            overflow: visible;
+        }
+    }
 `;
 
 const Heading = styled.h4`
@@ -65,7 +73,7 @@ const Paragraph = styled.p`
 `;
 
 const ImageSection = ({ title, text, subText, buttonText, image}) => (
-    <Base className="d-flex flex-column flex-lg-row-reverse position-relative">
+    <Base className="d-flex flex-column flex-lg-row-reverse position-relative overflow">
         <img src={SignalCircle} alt="Signal Circle" className="signal-circle" />
         <img src={image} alt="Large Img" className="ps-lg-5 ms-lg-2 large-image" />
         <div className="d-flex flex-column">
